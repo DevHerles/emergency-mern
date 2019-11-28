@@ -30,11 +30,13 @@ mongoose.Promise = global.Promise;
 
 if (process.env.NODE_ENV === "test") {
   mongoose.connect("mongodb://localhost/APIAuthenticationTEST", {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   });
 } else {
   mongoose.connect("mongodb://localhost/APIAuthentication", {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   });
 }
 

@@ -1,12 +1,16 @@
 {
-  "name": "backend",
+  "name": "apiauthentication",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "DevHerles",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
