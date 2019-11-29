@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cookieParser = require("cookie-parser");
 
-require('dotenv').config();
+//require('dotenv').config();
 
 const app = express();
 
 //Middlewares
 app.use(express.json());
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 
 app.use(cookieParser());
 app.use(
