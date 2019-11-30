@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const rootEl = document.querySelector('#root');
 import MainApp from './App';
+const rootEl = document.querySelector('#root');
 
 ReactDOM.render(<MainApp />, rootEl);
