@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header';
-import Navbar from './components/navbar.component';
+import App from './containers/App';
+import { configureStore } from './redux/store';
 
-class MainApp extends Component {
-  render() {
-    return (<Router>
-      <Switch>
-        <Route path="/" component={Navbar} />
-      </Switch>
-    </Router>
-    );
-  }
-}
+const MainApp = () => (
+  <Provider store={configureStore()}>
+			<Router>
+				<Switch>
+					<Route path="/" component={App} />
+				</Switch>
+			</Router>
+	</Provider>
+);
+
 export default MainApp;

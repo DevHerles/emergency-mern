@@ -1,6 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const rootEl = document.querySelector('#root');
-import MainApp from './App';
+//import MainApp from './App';
+const rootEl = document.getElementById("root");
 
-ReactDOM.render(<MainApp />, rootEl);
+//ReactDOM.render(<MainApp />, rootEl);
+
+let render = () => {
+  const MainApp = require('./App').default;
+  ReactDOM.render(
+    <MainApp />,
+    rootEl
+  );
+};
+
+render();
