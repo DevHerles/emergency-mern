@@ -1,6 +1,15 @@
+const socket_io = require('socket.io');
 const JWT = require('jsonwebtoken');
 const User = require('../models/user.model');
 const {JWT_SECRET} = require('../configuration');
+
+let io = socket_io();
+const userChangeStream = User.watch();
+
+userChangeStream.on('change', (change) => {
+  console.log('userChangeStream: ' + JSON.stringify(change));
+  io.emit('changeData', change);
+})
 
 signToken = user => {
   return JWT.sign({
