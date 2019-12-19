@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+  mongoose.set('useCreateIndex', true);
 const morgan = require('morgan');
 const cookieParser = require("cookie-parser");
 
